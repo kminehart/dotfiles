@@ -33,7 +33,7 @@ output eDP-1 disable
 output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output "*" bg /home/kminehart/.sway/sway/assets/Sway_Wallpaper_Blue_1920x1080.png fill
+output "*" bg $HOME/.sway/assets/Sway_Wallpaper_Blue_1920x1080.png fill
 
 #
 # Example configuration:
@@ -239,5 +239,8 @@ gaps inner 5
 gaps outer 5
 
 include /sway/config.d/*
+include /etc/sway/config.d/*
+include /etc/sway/config.d/*
 
-exec dunst
+exec mako
+exec xrdb --merge $HOME/.Xresources

@@ -23,8 +23,8 @@ URxvt.iso14755_52: false
 *.color11:    #F4F99D
 *.color4:     #BD93F9
 *.color12:    #CAA9FA
-*.color5:     #FF79C6
-*.color13:    #FF92D0
+*.color5:     #8F79C6
+*.color13:    #8F92D0
 *.color6:     #8BE9FD
 *.color14:    #9AEDFE
 *.color7:     #BFBFBF

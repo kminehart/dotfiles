@@ -17,6 +17,8 @@ Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
+Plug 'joshdick/onedark.vim'
+
 call plug#end()
 
 " Autocompletion via Deoplete
@@ -36,18 +38,18 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|vendor\|\.git'
-" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-" set termguicolors
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-set t_Co=256
-
-" " Enable dracula theme
+" Syntax Highlighting
 syntax on
-set background=dark
- colorscheme dracula
+highlight LineNr ctermfg=darkgray
+highlight Pmenu ctermbg=darkgray guibg=darkgray
+
+
 
 " Line numbers
 set number
+set numberwidth=5
 
 " Syntax, spacing
 set expandtab
@@ -126,3 +128,4 @@ let g:go_fmt_command = "goimports"
 " " Ale
 " let g:ale_sign_error = '⤫'
 " let g:ale_sign_warning = '⚠'
+"
