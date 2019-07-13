@@ -42,9 +42,15 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Syntax Highlighting
 syntax on
-highlight LineNr ctermfg=darkgray
-highlight Pmenu ctermbg=darkgray guibg=darkgray
 
+" Color overrides
+highlight LineNr ctermfg=darkgray
+highlight Pmenu ctermbg=darkgray
+highlight Pmenu ctermfg=white
+
+" File Explorer (netrw)
+let g:netrw_special_syntax = 1
+let g:netrw_liststyle = 3
 
 
 " Line numbers
@@ -128,4 +134,3 @@ let g:go_fmt_command = "goimports"
 " " Ale
 " let g:ale_sign_error = '⤫'
 " let g:ale_sign_warning = '⚠'
-"
