@@ -1,7 +1,7 @@
 URxvt.scrollBar: false
 URxvt.saveLines: 20000
 URxvt.urgentOnBell: true
-URxvt.font: xft:Noto Sans Mono:size=10,xft:PowerlineSymbols:pixelsize=12,xft:Noto Sans Kannada:style=Regular:pixelsize=14,xft:Mona:style=Regular:pixelsize=14
+URxvt.font: xft:Noto Sans Mono:size=11,xft:PowerlineSymbols:pixelsize=12,xft:Noto Sans Kannada:style=Regular:pixelsize=14,xft:Mona:style=Regular:pixelsize=14
 URxvt.scrollTtyKeypress: true
 URxvt.copyCommand: xclip -i -selection clipboard
 URxvt.letterSpace: 0
