@@ -1,4 +1,4 @@
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 
 " Ctrl+P = fast file browser
 Plug 'kien/ctrlp.vim'
