@@ -23,17 +23,17 @@ set $menu rofi -show drun | xargs swaymsg exec
 #
 
 # Disable laptop display
-output eDP-1 disable
+# output eDP-1 disable
 
 
 # # Enable laptop display
-# output eDP-1 scale 2
-# output eDP-1 resolution 1920x1080 position 0,0
+output eDP-1 scale 1
+output eDP-1 resolution 2880x1620 position 0,0
 
 output HDMI-A-1 resolution 1920x1080 position 1920,0
 
 # Default wallpaper (more resolutions are available in @datadir@/backgrounds/sway/)
-output "*" bg $HOME/.sway/assets/Sway_Wallpaper_Blue_1920x1080.png fill
+output "*" bg $HOME/.sway/sway/assets/Sway_Wallpaper_Blue_1920x1080.png fill
 
 #
 # Example configuration:
@@ -243,4 +243,4 @@ include /etc/sway/config.d/*
 include /etc/sway/config.d/*
 
 exec mako
-exec xrdb --merge $HOME/.Xresources
+exec xrdb $HOME/.Xresources
