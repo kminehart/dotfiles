@@ -21,16 +21,23 @@ Plug 'joshdick/onedark.vim'
 
 call plug#end()
 
+filetype plugin on
+
 " Autocompletion via Deoplete
 let g:deoplete#enable_at_startup = 1
+set omnifunc=syntaxcomplete#Complete
 
 " " Use <TAB>
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-let s:hidden_all = 1
+" Show tabs
+set list
+
+" let s:hidden_all = 1
 set noshowmode
 set noruler
-set laststatus=0
+" set laststatus=0
+set statusline+=%F
 set noshowcmd
 
 " ctrl-p
@@ -49,8 +56,8 @@ highlight Pmenu ctermbg=darkgray
 highlight Pmenu ctermfg=white
 
 " File Explorer (netrw)
-let g:netrw_special_syntax = 1
-let g:netrw_liststyle = 3
+" let g:netrw_special_syntax = 1
+" let g:netrw_liststyle = 1
 
 
 " Line numbers
@@ -131,6 +138,6 @@ let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
 
-" " Ale
-" let g:ale_sign_error = '⤫'
-" let g:ale_sign_warning = '⚠'
+" Ale
+let g:ale_sign_error = '⤫'
+let g:ale_sign_warning = '⚠'
