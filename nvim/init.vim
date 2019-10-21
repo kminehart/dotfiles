@@ -17,6 +17,7 @@ Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
+Plug 'leafgarland/typescript-vim'
 Plug 'joshdick/onedark.vim'
 
 call plug#end()
@@ -30,7 +31,7 @@ inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 let s:hidden_all = 1
 set noshowmode
 set noruler
-set laststatus=0
+set laststatus=2
 set noshowcmd
 
 " ctrl-p
@@ -43,14 +44,19 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 " Syntax Highlighting
 syntax on
 
+augroup SyntaxSettings
+  autocmd!
+  autocmd BufNewFile,BufRead *.tsx set filetype=typescript
+augroup END
+
 " Color overrides
 highlight LineNr ctermfg=darkgray
 highlight Pmenu ctermbg=darkgray
 highlight Pmenu ctermfg=white
 
-" File Explorer (netrw)
-let g:netrw_special_syntax = 1
-let g:netrw_liststyle = 3
+" " File Explorer (netrw)
+" let g:netrw_special_syntax = 1
+" let g:netrw_liststyle = 3
 
 
 " Line numbers
@@ -100,8 +106,6 @@ autocmd BufWrite *.htm,*.html,*.css,*.js,*.php :call DeleteTrailingWS()
 
 " PHP Indentation
 autocmd FileType php setlocal shiftwidth=4 tabstop=4 softtabstop=4
-autocmd FileType typescript setlocal shiftwidth=4 softtabstop=4 expandtab
-autocmd FileType typescript.tsx setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " Undos
 set undodir=~/.vim/undo
