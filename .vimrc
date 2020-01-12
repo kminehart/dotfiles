@@ -10,20 +10,20 @@ call plug#begin('~/.vim/bundle')
 Plug 'kien/ctrlp.vim'
 Plug 'dracula/vim'
 
-" Colorizing
-Plug 'lilydjwg/colorizer'
-
 " Golang
 Plug 'fatih/vim-go'
 
 " Linting
 Plug 'w0rp/ale'
 
-" Deoplete
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
 
 Plug 'joshdick/onedark.vim'
 
@@ -53,17 +53,15 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|vendor\|\.git'
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 " Syntax Highlighting
 syntax on
 
 " Color overrides
-highlight LineNr ctermfg=darkgray
-highlight Pmenu ctermbg=darkgray
-highlight Pmenu ctermfg=white
 set t_Co=256
 set background=dark
+colorscheme dracula
+highlight LineNr ctermfg=darkgray
 
 " File Explorer (netrw)
 " let g:netrw_special_syntax = 1
@@ -72,7 +70,6 @@ set background=dark
 
 " Line numbers
 set number
-set numberwidth=5
 
 " Syntax, spacing
 set expandtab
@@ -147,7 +144,9 @@ let g:go_highlight_structs = 1
 let g:go_highlight_types = 1
 let g:go_auto_sameids = 1
 let g:go_fmt_command = "goimports"
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 
 " Ale
-let g:ale_sign_error = '⤫'
-let g:ale_sign_warning = '⚠'
+let g:ale_sign_error = ''
+let g:ale_sign_warning = ''

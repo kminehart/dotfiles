@@ -71,7 +71,7 @@ CASE_SENSITIVE="false"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-ZSH_TMUX_AUTOSTART="true"
+# ZSH_TMUX_AUTOSTART="true"
 plugins=(git vi-mode zsh-autosuggestions helm tmux)
 
 source $ZSH/oh-my-zsh.sh
@@ -90,7 +90,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR='nvim'
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -107,19 +107,18 @@ export EDITOR='nvim'
 DEFAULT_USER=kminehart
 alias ls="ls --color"
 alias kuebctl=kubectl
-# alias vim=nvim
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/.poetry/bin
 
 export DRONE_SERVER=http://drone.kubernetes.local
 export DRONE_TOKEN=mdsiVVf03BuJfSd1ntZKIr4qHIhtmbZe
 
 export FLUX_FORWARD_NAMESPACE=flux
 
-export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config.microk8s:$HOME/.kube/config.aws:$HOME/.kube/config.minehart.software
+# export KUBECONFIG=$KUBECONFIG:$HOME/.kube/config.microk8s:$HOME/.kube/config.aws:$HOME/.kube/config.minehart.software
 
 # node version manager
 export NVM_DIR="$HOME/.nvm"
