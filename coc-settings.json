@@ -1,11 +1,5 @@
 {
   "languageserver": {
-    "python": {
-      "venvFolders": ["envs",".pyenv",".direnv", ".venv"],
-      "formatting": {
-        "provider": "black"
-      }
-    },
     "golang": {
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
