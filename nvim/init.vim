@@ -46,6 +46,19 @@ hi PmenuSbar ctermbg=white
 hi Tabs ctermfg=darkgray
 hi SpellBad ctermfg=red ctermbg=white
 hi SpellCap ctermfg=red ctermbg=white
+
+" coc-nvim color fixes
+hi CocErrorFloat ctermbg=red ctermfg=black
+hi CocErrorHighlight cterm=underline ctermbg=none ctermfg=red
+
+hi CocWarnFloat ctermbg=yellow ctermfg=black
+hi CocWarnHighlight cterm=underline ctermbg=none ctermfg=yellow
+
+hi CocInfoFloat ctermbg=blue ctermfg=black
+" hi CocInfoHighlight ctermbg=none ctermfg=blue
+
+hi CocFloating ctermbg=black
+
 match Tabs /\t/
 
 " Line numbers
