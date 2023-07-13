@@ -1,0 +1,27 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": ["css", "typescriptreact", "markdown", "typescript", "javascript", "ts", "tsx", "js", "jsx"],
+  "go.checkForUpdates": "disabled",
+  "go.goplsOptions": {
+    "experimentalPostfixCompletions": true,
+    "semanticTokens": true,
+    "linksInHover": false,
+    "usePlaceholders": true,
+    "staticcheck": true,
+    "gofumpt": true,
+    "completeUnimported": true
+  },
+  "languageserver": {
+    "jsonnet": {
+      "command": "jsonnet-language-server",
+      "args": ["-t"],
+      "rootPatterns": [".git/", "jsonnetfile.json"],
+      "filetypes": ["jsonnet","libsonnet"]
+    },
+    "golang": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    }
+  },
+  "snippets.ultisnips.pythonPrompt": false
+}
